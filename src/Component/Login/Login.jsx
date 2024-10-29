@@ -40,8 +40,11 @@ const Login = () => {
           <h3>Email : {user.email}</h3>
         </div>
       )}
-      <button onClick={handelLogin}>Login</button>
-      <button onClick={handelSignOut}>Log out</button>
+      {user ? (
+        <button onClick={handelSignOut}>Log out</button>
+      ) : ( 
+        <button onClick={handelLogin}>Login</button>
+      )}
     </div>
   );
 };
